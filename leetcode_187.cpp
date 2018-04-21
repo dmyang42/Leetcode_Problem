@@ -12,16 +12,15 @@ public:
     }
     vector<string> findRepeatedDnaSequences(string s) {
         vector<string> res;
+        string tmp;
         char count[1048575] = {0}; //indicate using quanternary
-        string tmp, rest;
         int len = s.length();
         for (int i = 0; i < len - 9; ++i)
         {
-            tmp = s.substr(i, 10);
             int itr = 0;
-            for (int j = 0; j < 10; ++j)
+            for (int j = 9; j >= 0; --j)
             {
-                itr = itr + pow(4, j) * which_num(tmp[j]);
+                itr = (itr << 2) | which_num(s[i + j]);
             }
             if(count[itr] == 3)
             {
@@ -30,6 +29,7 @@ public:
             ++count[itr];
             if(count[itr] == 2)
             {
+                tmp = s.substr(i, 10);
                 res.push_back(tmp);
                 count[itr] = 3;
             }
