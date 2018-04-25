@@ -68,6 +68,21 @@ Note:
 The order of the result is not important. So in the above example, [5, 3] is also correct.
 Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?
 
+# Problem 268 : Missing Number
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+Example 1
+
+Input: [3,0,1]
+Output: 2
+Example 2
+
+Input: [9,6,4,2,3,5,7,0,1]
+Output: 8
+
+Note:
+Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
+
 # Problem 318 : Maximum Product of Word Lengths
 Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.
 
